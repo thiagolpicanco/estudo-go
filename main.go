@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/estudo-udemy-go/estrutura"
@@ -12,7 +13,30 @@ import (
 func main() {
 	//testaVariavelPacotes()
 	//testaFuncoes()
-	instanciandoEstruturas()
+	//instanciandoEstruturas()
+	funcaoEstrutura()
+	convertePJson()
+}
+
+func funcaoEstrutura() {
+	carro := estrutura.Carro{}
+	fmt.Printf("Carro:  %+v\r\n", carro)
+	carro.Modelo = "Crossfox"
+	carro.Marca = "Volks"
+	//carro.valor= Impossivel atribuir pois é privado
+	carro.SetValor(50000.00)
+	fmt.Printf("Carro apos set:  %+v\r\n", carro)
+	fmt.Printf("Valor via get : %.2f\n", carro.GetValor())
+
+}
+
+func convertePJson() {
+	carro := estrutura.Carro{}
+	fmt.Printf("Carro:  %+v\r\n", carro)
+	carro.Modelo = "Crossfox"
+	carro.Marca = "Volks"
+	objJSON, _ := json.Marshal(carro)
+	fmt.Println("Carro em JSON" + string(objJSON))
 }
 
 func exemploPonteiro() {
