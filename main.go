@@ -3,25 +3,47 @@ package main
 import (
 	"fmt"
 
+	"github.com/estudo-udemy-go/estrutura"
 	"github.com/estudo-udemy-go/funcao"
-
+	"github.com/estudo-udemy-go/ponteiro"
 	"github.com/estudo-udemy-go/variavel"
 )
 
 func main() {
 	//testaVariavelPacotes()
-	testaFuncoes()
+	//testaFuncoes()
+	instanciandoEstruturas()
 }
 
-/**
-LEMBRAR
+func exemploPonteiro() {
+	//Obtem o endereco de memoria da estrutura
+	casa := new(estrutura.Imovel)
 
-Não é possivel no go ter pacotes com importacao ciclica
+	fmt.Printf("CAsa: %p - %+v\r\n", &casa, casa)
+	//Construtor com um parametro
+	casa2 := estrutura.Imovel{Valor: 2000}
 
-**/
+	fmt.Printf("CAsa: %p - %+v\r\n", &casa2, casa2)
+
+	ponteiro.MudaDados(&casa2)
+
+	fmt.Printf("CAsa2 apos mudarDados:  %+v\r\n", casa2)
+}
+
+func instanciandoEstruturas() {
+	estrutura.CriacaoEstrutura()
+}
 
 //TestaVariavelPacotes executa chamadas de fora do pacote
 func testaVariavelPacotes() {
+
+	/**
+	  LEMBRAR
+
+	  Não é possivel no go ter pacotes com importacao ciclica
+
+	  **/
+
 	fmt.Println("Imprimindo valor de variavel dentro de outro pacote por ser publica: " + variavel.Endereco)
 	variavel.ImprimeVariaveis()
 }
