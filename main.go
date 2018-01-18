@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/estudo-go/funcao"
+	"github.com/estudo-udemy-go/funcao"
 
-	"github.com/estudo-go/variavel"
+	"github.com/estudo-udemy-go/variavel"
 )
 
 func main() {
