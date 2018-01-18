@@ -42,4 +42,15 @@ func testaFuncoes() {
 	//Envia a funcao soma como parametro, assim como os 2 numeros para serem calculado
 	resultadoSoma := funcao.Calcular(soma, numero1, numero2)
 	fmt.Println(resultadoSoma)
+
+	numero1 = 101
+	numero2 = 10
+
+	resultadoDivisao := funcao.DivisaoComRetornoAssinado(numero1, numero2)
+	fmt.Println(resultadoDivisao)
+
+	resultadoDivisao2, resto := funcao.DivisaoComResto(numero1, numero2)
+
+	fmt.Printf("Resultado da divisao: %d, Resto da divisao : %d\r\n", resultadoDivisao2, resto)
+
 }
