@@ -29,8 +29,29 @@ func TestaSlice() {
 	cidades[2] = "Arraial"
 	cidades[3] = "Buzios"
 
-	cidades = append(cidades, "Cabo Frio")
-
 	fmt.Println(cidades, len(cidades), cap(cidades))
+	fmt.Println(cidades)
+
+	//FAZENDO O CORTE
+	//primeiro e segundo
+	//O PRIMEIRO ITEM COMECA COM INDICE 0
+	// O SEGUNDA COMECA COM INDICE 1
+	teste := cidades[2:4]
+	fmt.Println(teste)
+
+	//INICIA DO ZERO
+	teste2 := cidades[:4]
+
+	fmt.Println(teste2)
+
+	teste3 := cidades[len(cidades)-2:]
+	fmt.Println(teste3)
+
+	//REMOVER ITEM DO SLICE
+
+	indiceRemover := 2
+	temp := cidades[:indiceRemover]
+	temp = append(temp, cidades[indiceRemover+1:]...)
+	copy(cidades, temp)
 	fmt.Println(cidades)
 }
