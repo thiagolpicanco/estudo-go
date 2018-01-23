@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/estudo-udemy-go/erro"
+
 	"github.com/estudo-udemy-go/estrutura"
 	"github.com/estudo-udemy-go/funcao"
 	"github.com/estudo-udemy-go/ponteiro"
@@ -14,8 +16,13 @@ func main() {
 	//testaVariavelPacotes()
 	//testaFuncoes()
 	//instanciandoEstruturas()
-	funcaoEstrutura()
-	convertePJson()
+	//funcaoEstrutura()
+	//convertePJson()
+	//condicional.TestaIF()
+	//loops.TestaLoop()
+	//	condicional.TestaSwitch()
+	//colecao.TestaMapa()
+	erro.TestaErros()
 }
 
 func funcaoEstrutura() {
