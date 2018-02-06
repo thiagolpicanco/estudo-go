@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/estudo-udemy-go/slice"
+	"github.com/estudo-udemy-go/canais"
 
 	"github.com/estudo-udemy-go/estrutura"
 	"github.com/estudo-udemy-go/funcao"
@@ -24,7 +24,9 @@ func main() {
 	//colecao.TestaMapa()
 	//erro.TestaErros()
 	//array.TestaArrays()
-	slice.TestaSlice()
+	//slice.TestaSlice()
+	//goroutines.TestaRotinas()
+	canais.TestaCanais()
 }
 
 func funcaoEstrutura() {
